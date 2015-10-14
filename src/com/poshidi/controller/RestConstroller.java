@@ -1,4 +1,4 @@
-package com.poshidi;
+package com.poshidi.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

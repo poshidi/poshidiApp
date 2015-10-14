@@ -13,8 +13,8 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * @author dengzhifeng
- * @time 2009-1-7
+ * @author poshidi
+ * @time 2015-09-30
  */
 public class TreeHelper{
 
