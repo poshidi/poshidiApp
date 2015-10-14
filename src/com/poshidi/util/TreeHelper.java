@@ -107,11 +107,11 @@ public class TreeHelper{
                 || transedTree.isEmpty() || transedTree == null) {
             return result;
         } else {
-            if (transedTree.get("parentid") == null) {
+            if (transedTree.get("parent_id") == null) {
                 result = false;
             } else {
                 Map parentTree = TreeHelper.getTree(source, transedTree.get(
-                        "parentid").toString());
+                        "parent_id").toString());
                 if (null == parentTree || parentTree.isEmpty()) {
                     result = false;
                 } else {
@@ -139,8 +139,8 @@ public class TreeHelper{
         Iterator it = source.iterator();
         while (it.hasNext()) {
             Map item = (Map) it.next();
-            if (item.get("parentid") != null) {
-                if (item.get("parentid").toString().equals(treeid)) {
+            if (item.get("parent_id") != null) {
+                if (item.get("parent_id").toString().equals(treeid)) {
                     result.add(item);
                 }
             }

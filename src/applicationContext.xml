@@ -11,11 +11,12 @@
                 http://www.springframework.org/schema/context
                 http://www.springframework.org/schema/context/spring-context.xsd
                 http://www.springframework.org/schema/mvc
-                http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
                 ">
 
     <!-- 启动注解驱动的Spring MVC功能，注册请求url和注解POJO类方法的映射-->
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
+    <mvc:resources mapping="/assert/**/" location="/assert/"/>
     <!-- 启动包扫描功能，以便注册带有@Controller、@Service、@repository、@Component等注解的类成为spring的bean -->
     <context:component-scan base-package="com.poshidi" />
     <!-- 对模型视图名称的解析，在请求时模型视图名称添加前后缀 -->
@@ -39,7 +40,7 @@
     <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
         <!-- 此处应注入ibatis配置文件，而非sqlMap文件，否则会出现“there is no statement.....异常” -->
         <property name="configLocation">
-            <value>sqlMapConfig.xml</value>
+            <value>classpath:sqlMapConfig.xml</value>
         </property>
 
     </bean>
