@@ -1,6 +1,4 @@
-package com.poshidi.study.algorithm.sort.quicksort;
-
-import com.poshidi.study.algorithm.sort.ArrayUtils;
+package com.poshidi.study.algorithm.sort;
 
 import java.util.Random;
 
@@ -40,24 +38,14 @@ public class QuickSortTest {
         return low;                   //返回中轴的位置
     }
 
-    public static void init(int[] list){
-        for(int i = 1; i < 20; i++){
-            Random random = new Random();
-            list[i] = random.nextInt(100);
-        }
-    }
-
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        int[] array = new int[20];
-        init(array);
-        long start = System.currentTimeMillis();
+        int size = 10;
+        int[] array = new int[size];
+        ArrayUtils.initArr(array, size);
         QuickSortTest qs=new QuickSortTest();
         ArrayUtils.printArray(array);
         qs.quick(array);
-        long end = System.currentTimeMillis();
-        long time = end - start;
-        System.out.println("排序共用了" + time);
         ArrayUtils.printArray(array);
 
     }
