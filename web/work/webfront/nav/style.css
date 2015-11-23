@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * @author poshidi
+ * @website http://www.poshidi.com;
+ * @date 2015-11-20 16:57;
+ */
+
+*,html { margin:0; padding:0;}
+img { border:none; vertical-align:middle;}
+
+/*========== header ============*/
+.header { height:90px; background: url(../images/header.jpg) repeat-x;}
+.headerL { width:572px; height:90px; background:url(../images/name.jpg) no-repeat;}
+.headerR { width:428px; height:90px; background:url(../images/headerR.jpg) no-repeat; float:right;}
+.headerR a { height:15px; padding:0 5px; float:right; margin-top:5px; font:12px/15px "songti"; color:#cee4ff; text-decoration:none;}
+.headerR a:hover { color:#FF0;}
+.headerR a img { margin:0 5px;}
+.navBox { width:100%; height:30px; position:absolute; top:59px;}
+/*
+.nav { height:30px; width:355px; margin:0 auto;   }
+.nav a { width:114px; height:28px; float:left; margin-right:1px; border:solid 1px #4d98f3; background-color:#2781f1; font: bold 14px/28px "微软雅黑","songti"; color:#FFF; text-align:center; text-decoration:none;}
+.nav a:hover { color:#FF0;}*/
+
+.nav { height:30px; width:355px; margin:0 auto;}
+.nav a, .nav a:visited{ width:114px; height:28px; float:left; margin-right:1px; border:solid 1px #4d98f3; background-color:#2781f1; font: bold 14px/28px "微软雅黑","songti"; color:#FFF; text-align:center; text-decoration:none;}
+.nav a:hover { color:#FF0;}
+.nav #select { color:#FF0;}
+
+#navigation, #navigation li ul { list-style-type:none; } 
+#navigation { margin:0; padding:0;} 
+#navigation li { float:left; text-align:left; position:relative; } 
+
+#navigation li a:link, #navigation li a:visited { float:left; height:28px;  color:#FFF; text-decoration:none;} 
+#navigation li a:hover { background-color:#0068ef; color:#FF0;} 
+
+#navigation li ul li a:link, #navigation li ul li a:visited { display:block; text-decoration:none; color:#006aec; width:116px; height:28px; line-height:28px; border:1px solid #fff; border-width:1px 0 0 0; background:#d8eaff;  margin-top:0;} 
+#navigation li ul li a:hover { color:#fff; background:#006aec; } 
+#navigation li ul { display:none; position:absolute; top:30px; left:0; margin-top:0px; width:116px; } 
+
