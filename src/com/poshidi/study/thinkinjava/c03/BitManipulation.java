@@ -1,4 +1,4 @@
-package com.poshidi.study.thinkinjava;
+package com.poshidi.study.thinkinjava.c03;
 
 import java.util.Random;
 
