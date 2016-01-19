@@ -15,3 +15,30 @@ function inherit(p){
     f.prototype = p;
     return new f();
 }
+
+//6.6:ÊôÐÔgetterºÍsetter
+var p = {
+    x:  1.0,
+    y:  1.0,
+
+    get r(){
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    },
+    set r(newvalue){
+        var oldvalue = Math.sqrt(this.x * this.x + this.y * this.y);
+        var ratio = newvalue / oldvalue;
+        this.x *= ratio;
+        this.y *= ratio;
+    },
+    get theta(){
+        return Math.atan2(this.y, this.x);
+    }
+};
+
+//6.8.2
+//Àý6-4: classof()º¯Êý
+function classof(o){
+    if(o === null)  return "Null";
+    if(o === undefined) return "Undefined";
+    return Object.prototype.toString.call(0).slice(8,-1);
+}
