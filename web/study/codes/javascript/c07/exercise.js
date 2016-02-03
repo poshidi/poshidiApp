@@ -57,8 +57,17 @@ a.slice(-3,-2);
 
 //7.8.6 splice()
 //Array.splice()方法是在数组中插入或删除元素的通用方法，会修改调用的数组。
+var a = [1, 2, 3, 4, 5, 6, 7, 8,];
+a.splice(4);    //返回[5, 6, 7, 8]; a是[1, 2, 3, 4]
+a.splice(1, 2); //返回[2, 3]; a是[1, 4]
+a.splice(1, 1); //返回[4]; a是[1]
+
+var a = [1, 2, 3, 4, 5];
+a.splice(2, 0, 'a', 'b');   //  返回[]; a是[1, 2, 'a', 'b', 3, 4, 5]
+a.splice(2, 2, [1,2], 3);   //  返回['a', 'b']; a是[1, 2, [1, 2], 3, 3, 4, 5]
 
 //7.9.3 filter()
+//返回调用数组的一个子集
 var a = [5, 4, 3, 2, 1];
 var smallvalues = a.filter(function(x){ return x < 3 });    // [2, 1]
 var everyother = a.filter(function(x,i){ return i % 2 == 0});   // [5, 3, 1]
