@@ -46,3 +46,20 @@ function easycopy(args){
 // 来看如何调用easycopy()
 var a = [1, 2, 3, 4],   b = [];
 easycopy({ from:a, to: b, length: 4});
+
+//8.3.4
+// 返回数组（或类数组对象）a的元素的累加和
+// 数组a中必须为数字、null和undefined的元素都将忽略
+function sum(a){
+    if(isArrayLike(a)){
+        var total = 0;
+        for(var i = 0; i < a.length; i++){  //遍历所有元素
+            var element = a[i];
+            if(element == null) continue;   // 跳过null和undefined
+            if(isFinite(element)) total += element;
+            else throw new Error("sum(): elements must be finite numbers");
+        }
+        return total;
+    }
+    else throw new Error("sum(): argument must be array-like");
+}

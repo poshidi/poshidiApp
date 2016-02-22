@@ -100,3 +100,19 @@ a.length = i;
 var total = 0;
 for(var j = 0; j < a.length; j++)
     total += a[j];
+
+//判断o是否是一个类数组对象
+//字符串和函数有length属性，但是他们
+//可以用typeof检测将其排除。在客户端JavaScript中，DOM文本节点
+//也有length属性，需要用额外判断o.nodeType != 3将其排除
+function isArrayLike(o){
+    if(o &&                                         // o非null、undefined等
+       typeof o === "object" &&                     // o是对象
+       isFinite(o.length) &&                        // o.length是有限数值
+        o.length >= 0 &&                            // o.length为非负值
+        o.length === Math.floor(o.length) &&        // o.length是整数
+        o.length < 4294967296)                      // o.length < 2^32
+        return true;
+    else
+        return false;                               // 否则它不是
+}
