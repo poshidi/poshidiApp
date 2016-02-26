@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/rest")
 public class RestConstroller {
     public RestConstroller() {}
     private RegionDao dao;
